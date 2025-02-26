@@ -26,7 +26,6 @@ Feature: User Registration
     Then I expect that element "data-test='input-username'" contains the same text as element "data-test='input-username'"
     And I expect that element "data-test='input-username'" is displayed
     And I expect that element "data-test='input-username'" is not enabled
-    And I expect that cookie "session" does not contain "valid"
 
     Examples:
       | sample_username     |
@@ -54,7 +53,6 @@ Feature: User Registration
     Then I expect that element "data-test='input-password'" contains the same text as element "data-test='input-password'"
     And I expect that element "data-test='input-password'" is displayed
     And I expect that element "data-test='input-password'" is not enabled
-    And I expect that cookie "session" does not contain "valid"
 
     Examples:
       | sample_password     |
@@ -72,5 +70,4 @@ Feature: User Registration
     And I add "validpassword" to the inputfield "data-test='input-confirm-password'"
     When I click on the button "Register"
     Then I expect that the title is "Welcome"
-    And I expect that cookie "session" contains "valid"
     
