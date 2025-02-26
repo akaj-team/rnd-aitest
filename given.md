@@ -1,0 +1,29 @@
+Các bước Given được sử dụng để thiết lập trạng thái ban đầu cho bài kiểm tra.
+- **Mở trang web**:
+  - I open the (url|site) "([^"]*)?"
+- **Kiểm tra sự hiển thị của phần tử**:
+  - the element "([^"]*)?" is( not)* displayed
+- **Kiểm tra trạng thái kích hoạt của phần tử**:
+  - the element "([^"]*)?" is( not)* enabled
+- **Kiểm tra trạng thái chọn của phần tử**:
+  - the element "([^"]*)?" is( not)* selected
+- **Kiểm tra sự tồn tại của phần tử**:
+  - there is (an|no) element "([^"]*)?" on the page
+- **Kiểm tra tiêu đề trang**:
+  - the title is( not)* "([^"]*)?"
+- **So sánh văn bản giữa các phần tử**:
+  - the element "([^"]*)?" contains( not)* the same text as element "([^"]*)?"
+- **Kiểm tra văn bản của phần tử**:
+  - the (button|element) "([^"]*)?"( not)* matches the text "([^"]*)?"
+- **Kiểm tra thuộc tính CSS của phần tử**:
+  - the( css)* attribute "([^"]*)?" from element "([^"]*)?" is( not)* "([^"]*)?"
+- **Kiểm tra cookie**:
+  - the cookie "([^"]*)?" contains( not)* the value "([^"]*)?"
+- **Kiểm tra kích thước của phần tử**:
+  - the element "([^"]*)?" is( not)* ([\d]+)px (broad|tall)
+- **Kiểm tra vị trí của phần tử**:
+  - the element "([^"]*)?" is( not)* positioned at ([\d]+)px on the (x|y) axis
+- **Thiết lập kích thước màn hình**:
+  - I have a screen that is ([\d]+) by ([\d]+) pixels
+- **Đóng tất cả nhưng tab đầu tiên**:
+  - I have closed all but the first (window|tab)
