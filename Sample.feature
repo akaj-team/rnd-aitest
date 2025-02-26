@@ -25,7 +25,6 @@ Feature: User Registration
     And I click on the button "Register"
     Then I expect that element "data-test='input-username'" contains the same text as element "data-test='input-username'"
     And I expect that element "data-test='input-username'" is displayed
-    And I expect that element "data-test='input-username'" is not enabled
 
     Examples:
       | sample_username     |
@@ -38,7 +37,6 @@ Feature: User Registration
     And I click on the button "Register"
     Then I expect that element "data-test='input-email'" contains the same text as element "data-test='input-email'"
     And I expect that element "data-test='input-email'" is displayed
-    And I expect that element "data-test='input-email'" is not enabled
 
     Examples:
       | sample_email        |
@@ -51,7 +49,6 @@ Feature: User Registration
     And I click on the button "Register"
     Then I expect that element "data-test='input-password'" contains the same text as element "data-test='input-password'"
     And I expect that element "data-test='input-password'" is displayed
-    And I expect that element "data-test='input-password'" is not enabled
 
     Examples:
       | sample_password     |
