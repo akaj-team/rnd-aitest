@@ -1,3 +1,4 @@
+#### 1. **Given Steps**
 Các bước Given được sử dụng để thiết lập trạng thái ban đầu cho bài kiểm tra.
 - **Mở trang web**:
   - I open the (url|site) "([^"]*)?"
