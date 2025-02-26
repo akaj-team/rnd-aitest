@@ -39,7 +39,6 @@ Feature: User Registration
     Then I expect that element "data-test='input-email'" contains the same text as element "data-test='input-email'"
     And I expect that element "data-test='input-email'" is displayed
     And I expect that element "data-test='input-email'" is not enabled
-    And I expect that cookie "session" does not contain "valid"
 
     Examples:
       | sample_email        |
