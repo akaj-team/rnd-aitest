@@ -2,7 +2,9 @@
 Các bước When được sử dụng để thực hiện các hành động trong bài kiểm tra.
 - **Nhấp vào phần tử**:
   - I (click|doubleclick) on the sample element?"
-- **Nhập văn bản vào trường nhập**:
+- **Nhập văn bản đúng yêu cầu vào trường nhập**:
+  - I (add|set) "([^"]*)?" to the sample element?"
+- **Nhập văn bản vào sai yêu cầu vào trường nhập**:
   - I (add|set) "([^"]*)?" to the sample element?"
 - **Xóa nội dung trường nhập**:
   - I clear the sample element?"
