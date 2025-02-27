@@ -5,7 +5,7 @@ Các bước Then được sử dụng để xác nhận kết quả của bài 
 - **Kiểm tra sự hiển thị của phần tử**:
   - I expect that sample element is( not)* displayed
 - **Kiểm tra sự hiển thị của lỗi trong trường hợp không pass validation rule**:
-  - I expect that error message will displayed
+  - I expect that error message "([^"]*)?" will displayed
 - **Kiểm tra sự tồn tại của phần tử**:
   - I expect that sample element does( not)* exist
 - **So sánh văn bản giữa các phần tử**:
