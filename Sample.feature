@@ -19,6 +19,17 @@ Feature: User Registration
     Then I expect that the title is "Login"
     And I expect that the element "data-test='input-email'" is displayed
 
+  Scenario Outline: Validate email format
+    Given I am on the email input page
+    When I enter "<email>" on "data-test='input-email'"
+    Then I should see a error message "<message>"
+    
+  Examples:
+    | email                   | message              |
+    | example@example.com     | Email is valid       |
+    | example.com             | Email is invalid     |
+    | example@.com           | Email is invalid     |
+
   Scenario Outline: User tries to register with invalid username
     Given I clear the inputfield "data-test='input-username'"
     When I add "<sample_username>" to the inputfield "data-test='input-username'"
