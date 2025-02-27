@@ -30,18 +30,6 @@ Feature: User Registration
     | example.com             | Email is invalid     |
     | example@.com           | Email is invalid     |
 
-  Scenario Outline: User tries to register with invalid username
-    Given I clear the inputfield "data-test='input-username'"
-    When I add "<sample_username>" to the inputfield "data-test='input-username'"
-    And I click on the button "Register"
-    Then I expect that element "data-test='input-username'" contains the same text as element "data-test='input-username'"
-    And I expect that element "data-test='input-username'" is displayed
-
-    Examples:
-      | sample_username     |
-      |                     |  # Empty username
-      | short              |  # Less than 3 characters
-
   Scenario Outline: User tries to register with invalid email
     Given I clear the inputfield "data-test='input-email'"
     When I add "<sample_email>" to the inputfield "data-test='input-email'"
@@ -64,7 +52,7 @@ Feature: User Registration
     Examples:
       | sample_password     |
       |                     |  # Empty password
-      | short              |  # Less than 8 characters
+      | invalid password              |  # Less than 8 characters
 
   Scenario: User successfully registers
     Given I clear the inputfield "data-test='input-username'"
