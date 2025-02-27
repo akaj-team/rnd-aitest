@@ -66,4 +66,8 @@ Feature: User Registration
     And I add "validpassword" to the inputfield "data-test='input-confirm-password'"
     When I click on the button "Register"
     Then I expect that the title is "Welcome"
-    
+
+  Scenario: User navigates to the reset password page
+    When I click on the link "Reset Password?"
+    Then I expect that the title is "Reset Password"
+  
