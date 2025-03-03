@@ -69,7 +69,7 @@ Feature: User Registration
     And I add "validpassword" to the inputfield "data-test='input-password'"
     Given I clear the inputfield "data-test='input-confirm-password'"
     And I add "validpassword" to the inputfield "data-test='input-confirm-password'"
-    When I click on the button "Register"
+    When I click on the button "data-test='button-register'"
     Then I expect that the title is "Welcome"
 
   Scenario: User navigates to the term of usage page
