@@ -4,7 +4,7 @@ Feature: User Registration
   So that I can log in and use the system
 
   Background:
-    Given I open the site "https://abc.com/register"
+    Given I open the user registration page "https://abc.com/register"
 
   Scenario: User can see the registration page
     Then the element "data-test='input-username'" is displayed
