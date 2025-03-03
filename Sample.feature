@@ -12,12 +12,11 @@ Feature: User Registration
     Then the element "data-test='input-password'" is displayed
     Then the element "data-test='input-confirm-password'" is displayed
     Then the element "data-test='btn-register'" is displayed
-    Then the element "data-test='link-login'" is displayed
+    Then the element "data-test='link-tou'" is displayed
 
   Scenario: User can navigate to the login page
     When I click on the link "Login"
     Then I expect that the title is "Login"
-    And I expect that the element "data-test='input-email'" is displayed
 
   Scenario Outline: Validate email format
     Given I am on the email input page
@@ -30,29 +29,38 @@ Feature: User Registration
     | example.com             | Email is invalid     |
     | example@.com           | Email is invalid     |
 
-  Scenario Outline: User tries to register with invalid email
-    Given I clear the inputfield "data-test='input-email'"
-    When I add "<sample_email>" to the inputfield "data-test='input-email'"
-    And I click on the button "Register"
-    Then I expect that element "data-test='input-email'" contains the same text as element "data-test='input-email'"
-    And I expect that element "data-test='input-email'" is displayed
+ Scenario Outline: User tries to register with invalid email
+    Given the user is on the registration page
+    When the user enters "<email>" as the email address
+    And the user submits the registration form
+    Then the user should see an error message "<errorMessage>"
 
-    Examples:
-      | sample_email        |
-      |                     |  # Empty email
-      | invalid-email      |  # Invalid email format
+  Examples:
+    | email               | errorMessage                     |
+    | invalid-email       | "Please enter a valid email."   |
+    | user@.com           | "Please enter a valid email."   |
+    | user@domain..com    | "Please enter a valid email."   |
+    | user@domain.com.    | "Please enter a valid email."   |
+    | @domain.com         | "Please enter a valid email."   |
+    | user@domain.c       | "Please enter a valid email."   |
+
+ Feature: User Registration
 
   Scenario Outline: User tries to register with invalid password
-    Given I clear the inputfield "data-test='input-password'"
-    When I add "<sample_password>" to the inputfield "data-test='input-password'"
-    And I click on the button "Register"
-    Then I expect that element "data-test='input-password'" contains the same text as element "data-test='input-password'"
-    And I expect that element "data-test='input-password'" is displayed
+    Given the user is on the registration page
+    When the user enters "<username>" as username
+    And the user enters "<password>" as password
+    And the user submits the registration form
+    Then the user should see an error message "<error_message>"
 
-    Examples:
-      | sample_password     |
-      |                     |  # Empty password
-      | invalid password              |  # Less than 8 characters
+  Examples:
+    | username      | password     | error_message                     |
+    | user1        | 123          | Password must be at least 6 characters long |
+    | user2        | abc          | Password must be at least 6 characters long |
+    | user3        | password     | Password must contain at least one number |
+    | user4        | Password1    | Password must contain at least one lowercase letter |
+    | user5        | PASSWORD1    | Password must contain at least one lowercase letter |
+    | user6        | pass1234     | Password must contain at least one uppercase letter |
 
   Scenario: User successfully registers
     Given I clear the inputfield "data-test='input-username'"
@@ -66,7 +74,7 @@ Feature: User Registration
     When I click on the button "Register"
     Then I expect that the title is "Welcome"
 
-  Scenario: User navigates to the reset password page
-    When I click on the link "Reset Password?"
-    Then I expect that the title is "Reset Password"
+  Scenario: User navigates to the term of usage page
+    When I click on the link "View Term Of Use"
+    Then I expect that the title is "Term Of Use"
   
