@@ -28,10 +28,10 @@ Feature: User Registration
 
     Examples:
       | username | password | errorMessage                                                                |
-      |          |          | "Username can not empty"                                        |
-      | test     |          | "Password can not empty"                                        |
-      |          | test     | "Username can not empty"                                        |
-      | invalid  | invalid  | "Username and password do not match any user in database" |
+      |          |          | Username can not empty                                        |
+      | test     |          | Password can not empty                                        |
+      |          | test     | Username can not empty                                        |
+      | invalid  | invalid  | Username and password do not match any user in database |
 
   Scenario Outline: User tries to register with invalid email
     Given the user is on the registration page
