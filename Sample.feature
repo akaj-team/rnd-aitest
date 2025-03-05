@@ -18,16 +18,20 @@ Feature: User Registration
     When I click on the link "Login"
     Then I expect that the title is "Login"
 
-  Scenario Outline: Validate email format
-    Given I am on the email input page
-    When I enter "<email>" on "data-test='input-email'"
-    Then I should see a error message "<message>"
+  Scenario Outline: Validate username and password fields
+    Given I clear the inputfield "[data-test='username']"
+    And I add "<username>" to the inputfield "[data-test='username']"
+    Given I clear the inputfield "[data-test='password']"
+    And I add "<password>" to the inputfield "[data-test='password']"
+    When I click on the button "[data-test='login-button']"
+    Then I expect that error message "<errorMessage>" will displayed
 
     Examples:
-      | email               | message          |
-      | example@example.com | Email is valid   |
-      | example.com         | Email is invalid |
-      | example@.com        | Email is invalid |
+      | username | password | errorMessage                                                                |
+      |          |          | "Username can not empty"                                        |
+      | test     |          | "Password can not empty"                                        |
+      |          | test     | "Username can not empty"                                        |
+      | invalid  | invalid  | "Username and password do not match any user in database" |
 
   Scenario Outline: User tries to register with invalid email
     Given the user is on the registration page
