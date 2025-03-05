@@ -37,12 +37,12 @@ Feature: User Registration
 
     Examples:
       | email            | errorMessage                  |
-      | invalid-email    | "Please enter a valid email." |
-      | user@.com        | "Please enter a valid email." |
-      | user@domain..com | "Please enter a valid email." |
-      | user@domain.com. | "Please enter a valid email." |
-      | @domain.com      | "Please enter a valid email." |
-      | user@domain.c    | "Please enter a valid email." |
+      | invalid-email    | Please enter a valid email. |
+      | user@.com        | Please enter a valid email. |
+      | user@domain..com | Please enter a valid email. |
+      | user@domain.com. | Please enter a valid email. |
+      | @domain.com      | Please enter a valid email. |
+      | user@domain.c    | Please enter a valid email. |
 
   Scenario Outline: User tries to register with invalid password
     Given the user is on the registration page
