@@ -1,3 +1,4 @@
+@Register_Screen
 Feature: User Registration
   As a new user
   I want to be able to register for an account
