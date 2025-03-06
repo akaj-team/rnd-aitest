@@ -18,6 +18,14 @@ Feature: User Registration
   Scenario: User can navigate to the login page
     When I click on the link "Login"
     Then I expect that the title is "Login"
+    
+  Scenario: Ensure the employee name is displayed correctly
+    Then the element "data-test='element-name'" is displayed
+    And the element "data-test='employee-name'" matches the text "Employee Name"
+
+  Scenario: Ensure the employee ID is displayed correctly
+    Then the element "data-test='employee-id'" is displayed
+    And the element "data-test='employee-id'" matches the text "Employee Code"
 
   Scenario Outline: Validate username and password fields
     Given I clear the inputfield "[data-test='username']"
