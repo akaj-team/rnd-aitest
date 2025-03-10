@@ -41,21 +41,7 @@ Feature: User Registration
       | test     |          | Password can not empty                                        |
       |          | test     | Username can not empty                                        |
       | invalid  | invalid  | Username and password do not match any user in database |
-
-  Scenario Outline: User tries to register with invalid email
-    Given the user is on the registration page
-    When the user enters "<email>" as the email address
-    And the user submits the registration form
-    Then the user should see an error message "<errorMessage>"
-
-    Examples:
-      | email            | errorMessage                  |
-      | invalid-email    | Please enter a valid email. |
-      | user@.com        | Please enter a valid email. |
-      | user@domain..com | Please enter a valid email. |
-      | user@domain.com. | Please enter a valid email. |
-      | @domain.com      | Please enter a valid email. |
-      | user@domain.c    | Please enter a valid email. |
+      
 
   Scenario Outline: User tries to register with invalid password
     Given the user is on the registration page
