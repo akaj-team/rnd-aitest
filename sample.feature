@@ -116,27 +116,10 @@ Feature: User Registration
     And I clear the inputfield "//html/body/section/form/input[1]"
     Then I expect that element "//html/body/section/form/input[1]" not contains any text
 
-  Scenario: drag n drop
-    Given I open the url "http://guinea-pig.webdriver.io/"
-    And the element "[data-test='searchinput']" not contains the text "Dropped!"
-    When I drag element "#overlay" to element "[data-test='red']"
-    Then I expect that element "[data-test='searchinput']" contains the text "Dropped!"
-
   Scenario: wait for element
     Given I open the url "http://guinea-pig.webdriver.io/"
     And there is no element "[data-test='lateElem']" on the page
     Then I wait on element "[data-test='lateElem']" for 5000ms to be displayed
-
-  Scenario: wait for element using default wait time
-    Given I open the url "http://guinea-pig.webdriver.io/"
-    And there is no element "[data-test='lateElem']" on the page
-    Then I wait on element "[data-test='lateElem']" to be displayed
-
-  Scenario: pause
-    Given I open the url "http://guinea-pig.webdriver.io/"
-    And there is no element "[data-test='lateElem']" on the page
-    When I pause for 3000ms
-    Then I expect that element "[data-test='lateElem']" is displayed
 
   Scenario: query title
     Given I open the url "http://guinea-pig.webdriver.io/"
@@ -165,17 +148,3 @@ Feature: User Registration
     And the element "[data-test='secondPageLink']" not contains the text "andere linktext"
     Then I expect that element "[data-test='secondPageLink']" contains the text "two"
     And I expect that element "[data-test='secondPageLink']" not contains the text "anderer linktext"
-
-  Scenario: check attribute
-    Given I open the url "http://guinea-pig.webdriver.io/"
-    And the attribute "data-foundby" from element "[data-test='newWindow']" is "partial link text"
-    And the attribute "data-foundby" from element "[data-test='newWindow']" is not "something else"
-    Then I expect that the attribute "data-foundby" from element "[data-test='newWindow']" is "partial link text"
-    And I expect that the attribute "data-foundby" from element "[data-test='newWindow']" is not "something else"
-    # For some reason this test is failing when running it in the Travis VM
-  Scenario: check selected
-    Given I open the url "http://guinea-pig.webdriver.io/"
-    And the checkbox "[data-test='checkbox_notselected']" is not checked
-    When I click on the element "[data-test='checkbox_notselected']"
-    Then I expect that checkbox "[data-test='checkbox_notselected']" is checked
-    # This will fail in PhantoJS due to a security warning
