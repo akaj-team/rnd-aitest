@@ -8,24 +8,24 @@ Feature: User Registration
     Given I open the url "https://abc.com/"
 
   Scenario: User can see the registration page
-    Then I expect that the element "data-test='input-username'" is displayed
-    Then I expect that the element "data-test='input-email'" is displayed
-    Then I expect that the element "data-test='input-password'" is displayed
-    Then I expect that the element "data-test='input-confirm-password'" is displayed
-    Then I expect that the element "data-test='btn-register'" is displayed
-    Then I expect that the element "data-test='link-tou'" is displayed
+    Then I expect that the element "[data-test='input-username']" is displayed
+    Then I expect that the element "[data-test='input-email']" is displayed
+    Then I expect that the element "[data-test='input-password']" is displayed
+    Then I expect that the element "[data-test='input-confirm-password']" is displayed
+    Then I expect that the element "[data-test='btn-register']" is displayed
+    Then I expect that the element "[data-test='link-tou']" is displayed
 
   Scenario: User can navigate to the login page
     When I click on the link "Login"
     Then I expect that the title is "Login"
 
   Scenario: Ensure the employee name is displayed correctly
-    Then the element "data-test='element-name'" is displayed
-    And the element "data-test='employee-name'" matches the text "Employee Name"
+    Then the element "[data-test='element-name']" is displayed
+    And the element "[data-test='employee-name']" matches the text "Employee Name"
 
   Scenario: Ensure the employee ID is displayed correctly
-    Then the element "data-test='employee-id'" is displayed
-    And the element "data-test='employee-id'" matches the text "Employee Code"
+    Then the element "[data-test='employee-id']" is displayed
+    And the element "[data-test='employee-id']" matches the text "Employee Code"
 
   Scenario Outline: Validate username and password fields
     Given I clear the inputfield "[data-test='username']"
@@ -59,15 +59,15 @@ Feature: User Registration
       | user6    | pass1234  | Password must contain at least one uppercase letter |
 
   Scenario: User successfully registers
-    Given I clear the inputfield "data-test='input-username'"
-    And I add "valid_username" to the inputfield "data-test='input-username'"
-    Given I clear the inputfield "data-test='input-email'"
-    And I add "valid@example.com" to the inputfield "data-test='input-email'"
-    Given I clear the inputfield "data-test='input-password'"
-    And I add "validpassword" to the inputfield "data-test='input-password'"
-    Given I clear the inputfield "data-test='input-confirm-password'"
-    And I add "validpassword" to the inputfield "data-test='input-confirm-password'"
-    When I click on the button "data-test='button-register'"
+    Given I clear the inputfield "[data-test='input-username']"
+    And I add "valid_username" to the inputfield "[data-test='input-username']"
+    Given I clear the inputfield "[data-test='input-email']"
+    And I add "valid@example.com" to the inputfield "[data-test='input-email']"
+    Given I clear the inputfield "[data-test='input-password']"
+    And I add "validpassword" to the inputfield "[data-test='input-password']"
+    Given I clear the inputfield "[data-test='input-confirm-password']"
+    And I add "validpassword" to the inputfield "[data-test='input-confirm-password']"
+    When I click on the button "[data-test='button-register']"
     Then I expect that the title is "Welcome"
 
   Scenario: User navigates to the term of usage page
@@ -82,21 +82,21 @@ Feature: User Registration
 
   Scenario: click on button
     Given I open the url "http://guinea-pig.webdriver.io/"
-    And the element "data-test='btn1_clicked'" is not displayed
-    When I click on the button "data-test='btn1'"
-    Then I expect that element "data-test='btn1_clicked'" is displayed
+    And the element "[data-test='btn1_clicked']" is not displayed
+    When I click on the button "[data-test='btn1']"
+    Then I expect that element "[data-test='btn1_clicked']" is displayed
 
   Scenario: double click on a button
     Given I open the url "http://guinea-pig.webdriver.io/"
-    And the element "data-test='btn1'_dblclicked" is not displayed
-    When I doubleclick on the element "data-test='btn1'"
-    Then I expect that element "data-test='btn1'_dblclicked" is displayed
+    And the element "[data-test='btn1'_dblclicked" is not displayed
+    When I doubleclick on the element "[data-test='btn1']"
+    Then I expect that element "[data-test='btn1'_dblclicked" is displayed
 
   Scenario: click on element
     Given I open the url "http://guinea-pig.webdriver.io/"
-    And the element "data-test='btn1_clicked'" is not displayed
-    When I click on the element "data-test='btn1'"
-    Then I expect that element "data-test='btn1_clicked'" is displayed
+    And the element "[data-test='btn1_clicked']" is not displayed
+    When I click on the element "[data-test='btn1']"
+    Then I expect that element "[data-test='btn1_clicked']" is displayed
 
   Scenario: add value to an input element
     Given I open the url "http://guinea-pig.webdriver.io/"
@@ -118,25 +118,25 @@ Feature: User Registration
 
   Scenario: drag n drop
     Given I open the url "http://guinea-pig.webdriver.io/"
-    And the element "data-test='searchinput'" not contains the text "Dropped!"
-    When I drag element "#overlay" to element "data-test='red'"
-    Then I expect that element "data-test='searchinput'" contains the text "Dropped!"
+    And the element "[data-test='searchinput']" not contains the text "Dropped!"
+    When I drag element "#overlay" to element "[data-test='red']"
+    Then I expect that element "[data-test='searchinput']" contains the text "Dropped!"
 
   Scenario: wait for element
     Given I open the url "http://guinea-pig.webdriver.io/"
-    And there is no element "data-test='lateElem'" on the page
-    Then I wait on element "data-test='lateElem'" for 5000ms to be displayed
+    And there is no element "[data-test='lateElem']" on the page
+    Then I wait on element "[data-test='lateElem']" for 5000ms to be displayed
 
   Scenario: wait for element using default wait time
     Given I open the url "http://guinea-pig.webdriver.io/"
-    And there is no element "data-test='lateElem'" on the page
-    Then I wait on element "data-test='lateElem'" to be displayed
+    And there is no element "[data-test='lateElem']" on the page
+    Then I wait on element "[data-test='lateElem']" to be displayed
 
   Scenario: pause
     Given I open the url "http://guinea-pig.webdriver.io/"
-    And there is no element "data-test='lateElem'" on the page
+    And there is no element "[data-test='lateElem']" on the page
     When I pause for 3000ms
-    Then I expect that element "data-test='lateElem'" is displayed
+    Then I expect that element "[data-test='lateElem']" is displayed
 
   Scenario: query title
     Given I open the url "http://guinea-pig.webdriver.io/"
@@ -147,35 +147,35 @@ Feature: User Registration
 
   Scenario: check visibility
     Given I open the url "http://guinea-pig.webdriver.io/"
-    And the element "data-test='btn1'" is displayed
-    And the element "data-test='btn1_clicked'" is not displayed
-    Then I expect that element "data-test='btn1'" is displayed
-    And I expect that element "data-test='btn1_clicked'" is not displayed
+    And the element "[data-test='btn1']" is displayed
+    And the element "[data-test='btn1_clicked']" is not displayed
+    Then I expect that element "[data-test='btn1']" is displayed
+    And I expect that element "[data-test='btn1_clicked']" is not displayed
 
   Scenario: compare texts
     Given I open the url "http://guinea-pig.webdriver.io/"
-    And the element "data-test='secondPageLink'" contains the same text as element "data-test='secondPageLink'"
-    And the element "data-test='secondPageLink'" contains not the same text as element "data-test='githubRepo'"
-    Then I expect that element "data-test='secondPageLink'" contains the same text as element "data-test='secondPageLink'"
-    And I expect that element "data-test='secondPageLink'" not contains the same text as element "data-test='githubRepo'"
+    And the element "[data-test='secondPageLink']" contains the same text as element "[data-test='secondPageLink']"
+    And the element "[data-test='secondPageLink']" contains not the same text as element "[data-test='githubRepo']"
+    Then I expect that element "[data-test='secondPageLink']" contains the same text as element "[data-test='secondPageLink']"
+    And I expect that element "[data-test='secondPageLink']" not contains the same text as element "[data-test='githubRepo']"
 
   Scenario: check text content
     Given I open the url "http://guinea-pig.webdriver.io/"
-    And the element "data-test='secondPageLink'" contains the text "two"
-    And the element "data-test='secondPageLink'" not contains the text "andere linktext"
-    Then I expect that element "data-test='secondPageLink'" contains the text "two"
-    And I expect that element "data-test='secondPageLink'" not contains the text "anderer linktext"
+    And the element "[data-test='secondPageLink']" contains the text "two"
+    And the element "[data-test='secondPageLink']" not contains the text "andere linktext"
+    Then I expect that element "[data-test='secondPageLink']" contains the text "two"
+    And I expect that element "[data-test='secondPageLink']" not contains the text "anderer linktext"
 
   Scenario: check attribute
     Given I open the url "http://guinea-pig.webdriver.io/"
-    And the attribute "data-foundby" from element "data-test='newWindow'" is "partial link text"
-    And the attribute "data-foundby" from element "data-test='newWindow'" is not "something else"
-    Then I expect that the attribute "data-foundby" from element "data-test='newWindow'" is "partial link text"
-    And I expect that the attribute "data-foundby" from element "data-test='newWindow'" is not "something else"
+    And the attribute "data-foundby" from element "[data-test='newWindow']" is "partial link text"
+    And the attribute "data-foundby" from element "[data-test='newWindow']" is not "something else"
+    Then I expect that the attribute "data-foundby" from element "[data-test='newWindow']" is "partial link text"
+    And I expect that the attribute "data-foundby" from element "[data-test='newWindow']" is not "something else"
     # For some reason this test is failing when running it in the Travis VM
   Scenario: check selected
     Given I open the url "http://guinea-pig.webdriver.io/"
-    And the checkbox "data-test='checkbox_notselected'" is not checked
-    When I click on the element "data-test='checkbox_notselected'"
-    Then I expect that checkbox "data-test='checkbox_notselected'" is checked
+    And the checkbox "[data-test='checkbox_notselected']" is not checked
+    When I click on the element "[data-test='checkbox_notselected']"
+    Then I expect that checkbox "[data-test='checkbox_notselected']" is checked
     # This will fail in PhantoJS due to a security warning
