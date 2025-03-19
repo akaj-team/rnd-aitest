@@ -5,7 +5,7 @@ Feature: User Registration
   So that I can log in and use the system
 
   Background:
-    Given I open the user registration page "https://abc.com/"
+    Given I open the url "https://abc.com/"
 
   Scenario: User can see the registration page
     Then I expect that the element "data-test='input-username'" is displayed
