@@ -1,0 +1,30 @@
+## Then steps
+
+- `I expect that the title is( not)* "([^"]*)?"` <br>Check the title of the current browser window/tab
+- `I expect that element "([^"]*)?" does( not)* appear exactly "([^"]*)?" times` <br>Checks that the element is on the page a specific number of times
+- `I expect that element "([^"]*)?" is( not)* visible` <br>Check if a certain element is visible
+- `I expect that element "([^"]*)?" becomes( not)* visible` <br>Check if a certain element becomes visible
+- `I expect that element "([^"]*)?" is( not)* within the viewport` <br>Check if a certain element is within the current viewport
+- `I expect that element "([^"]*)?" does( not)* exist` <br>Check if a certain element exists
+- `I expect that element "([^"]*)?"( not)* contains the same text as element "([^"]*)?"` <br>Compare the text of two elements
+- `I expect that (button|element) "([^"]*)?"( not)* contains the text "([^"]*)?"` <br>Check if an element or input field contains the given text
+- `I expect that (button|element) "([^"]*)?"( not)* contains any text` <br>Check if an element or input field contains any text
+- `I expect that (button|elementelement) "([^"]*)?" is( not)* empty` <br>Check if an element or input field is empty
+- `I expect that the url is( not)* "([^"]*)?"` <br>Check if the the URL of the current browser window/tab is a certain string
+- `I expect that the path is( not)* "([^"]*)?"` <br>Check if the path of the URL of the current browser window/tab is a certain string
+- `I expect the url to( not)* contain "([^"]*)?"` <br>Check if the URL of the current browser window/tab contains a certain string
+- `I expect that the( css)* attribute "([^"]*)?" from element "([^"]*)?" is( not)* "([^"]*)?"` <br>Check the value of an element's (css) attribute
+- `I expect that checkbox "([^"]*)?" is( not)* checked` <br>Check if a check-box is (not) checked
+- `I expect that element "([^"]*)?" is( not)* selected` <br>Check if an element is (not) selected
+- `I expect that element "([^"]*)?" is( not)* enabled` <br>Check if an element is (not) enabled
+- `I expect that cookie "([^"]*)?"( not)* contains "([^"]*)?"` <br>Check if a cookie with a certain name contains a certain value
+- `I expect that cookie "([^"]*)?"( not)* exists` <br>Check if a cookie with a certain name exist
+- `I expect that element "([^"]*)?" is( not)* ([\d]+)px (broad|tall)` <br>Check the width/height of an element
+- `I expect that element "([^"]*)?" is( not)* positioned at ([\d]+)px on the (x|y) axis` <br>Check the position of an element
+- `I expect that element "([^"]*)?" (has|does not have) the class "([^"]*)?"` <br>Check if an element has a certain class
+- `I expect a new (window|tab) has( not)* been opened` <br>Check if a new window/tab has been opened
+- `I expect the url "([^"]*)?" is opened in a new (tab|window)` <br>Check if a URL is opened in a new browser window/tab
+- `I expect that element "([^"]*)?" is( not)* focused` <br>Check if an element has the focus
+- `I wait on element "([^"]*)?"( for (\d+)ms)*( to( not)* (be checked|be enabled|be selected|be visible|contain a text|contain a value|exist))*` <br>Wait for an element to be checked, enabled, selected, visible, contain a certain value or text or to exist
+- `I expect that a (alertbox|confirmbox|prompt) is( not)* opened` <br>Check if a modal is opened
+- `I expect that a (alertbox|confirmbox|prompt)( not)* contains the text "$text"` <br>Check the text of a modal
