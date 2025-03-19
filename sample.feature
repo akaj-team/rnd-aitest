@@ -5,7 +5,7 @@ Feature: User Registration
   So that I can log in and use the system
 
   Background:
-    Given I open the user registration page "https://abc.com/"
+    Given I open the url "https://abc.com/"
 
   Scenario: User can see the registration page
     Then I expect that the element "data-test='input-username'" is displayed
@@ -73,18 +73,6 @@ Feature: User Registration
   Scenario: User navigates to the term of usage page
     When I click on the link "View Term Of Use"
     Then I expect that the title is "Term Of Use"
-
-  Scenario: open URL
-    Given the page url is not "http://guinea-pig.webdriver.io/"
-    And I open the url "http://guinea-pig.webdriver.io/"
-    Then I expect that the url is "http://guinea-pig.webdriver.io/"
-    And I expect that the url is not "http://google.com"
-
-  Scenario: open sub page of weburl
-    Given the page url is not "http://guinea-pig.webdriver.io/two.html"
-    And I open the url "http://guinea-pig.webdriver.io/"
-    Then I expect that the url is "http://guinea-pig.webdriver.io/"
-    And I expect that the url is not "http://google.com"
 
   Scenario: click on link
     Given the title is not "two"
