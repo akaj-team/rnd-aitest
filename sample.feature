@@ -33,10 +33,10 @@ Feature: User Registration
     Given I clear the inputfield "[data-test='password']"
     And I add "<password>" to the inputfield "[data-test='password']"
     When I click on the button "[data-test='login-button']"
-    Then I expect that element "[data-test='error-button']" matches the text "<errorMessage>"
+    Then I expect that element "[data-test='error-button']" matches the text "<error_message>"
 
     Examples:
-      | username | password | errorMessage                                            |
+      | username | password | error_message                                            |
       |          |          | Username can not empty                                  |
       | test     |          | Password can not empty                                  |
       |          | test     | Username can not empty                                  |
