@@ -1,22 +1,41 @@
-## Given steps
-
-- `I open the (url|site) "([^"]*)?"` <br>Open a site in the current browser window/tab
-- `the element "([^"]*)?" is( not)* displayed` <br>Check the (in)visibility of an element
-- `the element "([^"]*)?" is( not)* enabled` <br>Check if an element is (not) enabled
-- `the element "([^"]*)?" is( not)* selected` <br>Check if an element is (not) selected
-- `the checkbox "([^"]*)?" is( not)* checked` <br>Check if a checkbox is (not) checked
-- `there is (an|no) element "([^"]*)?" on the page` <br>Check if an element (does not) exist
-- `the title is( not)* "([^"]*)?"` <br>Check the title of the current browser window/tab
-- `the element "([^"]*)?" contains( not)* the same text as element "([^"]*)?"` <br>Compare the text of two elements
-- `the (button|element) "([^"]*)?"( not)* contains the text "([^"]*)?"` <br>Check if an element contains the given text
-- `the (button|element) "([^"]*)?"( not)* contains any text` <br>Check if an element does not contain any text
-- `the (button|element) "([^"]*)?" is( not)* empty` <br>Check if an element is empty
-- `the page url is( not)* "([^"]*)?"` <br>Check the url of the current browser window/tab
-- `the( css)* attribute "([^"]*)?" from element "([^"]*)?" is( not)* "([^"]*)?"` <br>Check the value of an element's (css) attribute
-- `the cookie "([^"]*)?" contains( not)* the value "([^"]*)?"` <br>Check the value of a cookie
-- `the cookie "([^"]*)?" does( not)* exist` <br>Check the existence of a cookie
-- `the element "([^"]*)?" is( not)* ([\d]+)px (broad|tall)` <br>Check the width/height of an element
-- `the element "([^"]*)?" is( not)* positioned at ([\d]+)px on the (x|y) axis` <br>Check the position of an element
-- `I have a screen that is ([\d]+) by ([\d]+) pixels` <br>Set the browser size to a given size
-- `I have closed all but the first (window|tab)` <br>Close all but the first browser window/tab
-- `a (alertbox|confirmbox|prompt) is( not)* opened` <br>Check if a modal is opened
+#### 1. **Given steps**
+- Open a site in the current browser window/tab
+  - I open the (url|site) "([^"]*)?"
+- Check the (in)visibility of an element
+  - the element "([^"]*)?" is( not)* displayed
+- Check if an element is (not) enabled
+  - the element "([^"]*)?" is( not)* enabled
+- Check if an element is (not) selected
+  - the element "([^"]*)?" is( not)* selected
+- Check if a checkbox is (not) checked
+  - the checkbox "([^"]*)?" is( not)* checked
+- Check if an element (does not) exist
+  - there is (an|no) element "([^"]*)?" on the page
+- Check the title of the current browser window/tab
+  - the title is( not)* "([^"]*)?"
+- Compare the text of two elements
+  - the element "([^"]*)?" contains( not)* the same text as element "([^"]*)?"
+- Check if an element contains the given text
+  - the (button|element) "([^"]*)?"( not)* contains the text "([^"]*)?"
+- Check if an element does not contain any text
+  - the (button|element) "([^"]*)?"( not)* contains any text
+- Check if an element is empty
+  - the (button|element) "([^"]*)?" is( not)* empty
+- Check the url of the current browser window/tab
+  - the page url is( not)* "([^"]*)?"
+- Check the value of an element's (css) attribute
+  - the( css)* attribute "([^"]*)?" from element "([^"]*)?" is( not)* "([^"]*)?"
+- Check the value of a cookie
+  - the cookie "([^"]*)?" contains( not)* the value "([^"]*)?"
+- Check the existence of a cookie
+  - the cookie "([^"]*)?" does( not)* exist
+- Check the width/height of an element
+  - the element "([^"]*)?" is( not)* ([\d]+)px (broad|tall)
+- Check the position of an element
+  - the element "([^"]*)?" is( not)* positioned at ([\d]+)px on the (x|y) axis
+- Set the browser size to a given size
+  - I have a screen that is ([\d]+) by ([\d]+) pixels
+- Close all but the first browser window/tab
+  - I have closed all but the first (window|tab)
+- Check if a modal is opened
+  - a (alertbox|confirmbox|prompt) is( not)* opened
