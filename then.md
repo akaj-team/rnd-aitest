@@ -1,4 +1,4 @@
-#### 3. **Then steps**
+**Then steps**
 - Check the title of the current browser window/tab:
   - I expect that the title is( not)* "([^"]*)?"
 - Checks that the element is on the page a specific number of times:
