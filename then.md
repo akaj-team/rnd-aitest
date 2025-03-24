@@ -1,45 +1,45 @@
 #### 3. **Then steps**
-- Check the title of the current browser window/tab
+- Check the title of the current browser window/tab:
   - I expect that the title is( not)* "([^"]*)?"
-- Checks that the element is on the page a specific number of times
+- Checks that the element is on the page a specific number of times:
   - I expect that element "([^"]*)?" does( not)* appear exactly "([^"]*)?" times
-- Check if a certain element is visible
+- Check if a certain element is visible:
   - I expect that element "([^"]*)?" is( not)* visible
-- Check if a certain element becomes visible
+- Check if a certain element becomes visible:
   - I expect that element "([^"]*)?" becomes( not)* visible
-- Check if a certain element is within the current viewport
+- Check if a certain element is within the current viewport:
   - I expect that element "([^"]*)?" is( not)* within the viewport
-- Check if a certain element exists
+- Check if a certain element exists:
   - I expect that element "([^"]*)?" does( not)* exist
-- Compare the text of two elements
+- Compare the text of two elements:
   - I expect that element "([^"]*)?"( not)* contains the same text as element "([^"]*)?"
-- Check if an element or input field contains the given text
+- Check if an element or input field contains the given text:
   - I expect that (button|element) "([^"]*)?"( not)* contains the text "([^"]*)?"
-- Check if an element or input field contains any text
+- Check if an element or input field contains any text:
   - I expect that (button|element) "([^"]*)?"( not)* contains any text
-- Check if an element or input field is empty
+- Check if an element or input field is empty:
   - I expect that (button|elementelement) "([^"]*)?" is( not)* empty
-- Check if the the URL of the current browser window/tab is a certain string
+- Check if the the URL of the current browser window/tab is a certain string:
   - I expect that the url is( not)* "([^"]*)?"
-- Check if the path of the URL of the current browser window/tab is a certain string
+- Check if the path of the URL of the current browser window/tab is a certain string:
   - I expect that the path is( not)* "([^"]*)?"
-- Check if the URL of the current browser window/tab contains a certain string
+- Check if the URL of the current browser window/tab contains a certain string:
   - I expect the url to( not)* contain "([^"]*)?"
-- Check if a check-box is (not) checked
+- Check if a check-box is (not) checked:
   - I expect that checkbox "([^"]*)?" is( not)* checked
-- Check if an element is (not) selected
+- Check if an element is (not) selected:
   - I expect that element "([^"]*)?" is( not)* selected
-- Check if an element is (not) enabled
+- Check if an element is (not) enabled:
   - I expect that element "([^"]*)?" is( not)* enabled
-- Check if a new window/tab has been opened
+- Check if a new window/tab has been opened:
   - I expect a new (window|tab) has( not)* been opened
-- Check if a URL is opened in a new browser window/tab
+- Check if a URL is opened in a new browser window/tab:
   - I expect the url "([^"]*)?" is opened in a new (tab|window)
-- Check if an element has the focus
+- Check if an element has the focus:
   - I expect that element "([^"]*)?" is( not)* focused
-- Wait for an element to be checked, enabled, selected, visible, contain a certain value or text or to exist
+- Wait for an element to be checked, enabled, selected, visible, contain a certain value or text or to exist:
   - I wait on element "([^"]*)?"( for (\d+)ms)*( to( not)* (be checked|be enabled|be selected|be visible|contain a text|contain a value|exist))*
-- Check if a modal is opened
+- Check if a modal is opened:
   - I expect that a (alertbox|confirmbox|prompt) is( not)* opened
-- Check the text of a modal
+- Check the text of a modal:
   - I expect that a (alertbox|confirmbox|prompt)( not)* contains the text "$text"
