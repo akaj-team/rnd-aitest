@@ -1,4 +1,4 @@
-#### 2. **When steps**
+**When steps**
 - (Double)click a link, button or element:
   - I (click|doubleclick) on the (link|button|element) "([^"]*)?"
 - Add or set the content of an input field:
