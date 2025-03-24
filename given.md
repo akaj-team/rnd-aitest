@@ -1,27 +1,27 @@
 #### 1. **Given steps**
-- Open a site in the current browser window/tab
+- Open a site in the current browser window/tab:
   - I open the (url|site) "([^"]*)?"
-- Check the (in)visibility of an element
+- Check the (in)visibility of an element:
   - the element "([^"]*)?" is( not)* displayed
-- Check if an element is (not) enabled
+- Check if an element is (not) enabled:
   - the element "([^"]*)?" is( not)* enabled
-- Check if an element is (not) selected
+- Check if an element is (not) selected:
   - the element "([^"]*)?" is( not)* selected
-- Check if a checkbox is (not) checked
+- Check if a checkbox is (not) checked:
   - the checkbox "([^"]*)?" is( not)* checked
-- Check if an element (does not) exist
+- Check if an element (does not) exist:
   - there is (an|no) element "([^"]*)?" on the page
-- Check the title of the current browser window/tab
+- Check the title of the current browser window/tab:
   - the title is( not)* "([^"]*)?"
-- Compare the text of two elements
+- Compare the text of two elements:
   - the element "([^"]*)?" contains( not)* the same text as element "([^"]*)?"
-- Check if an element contains the given text
+- Check if an element contains the given text:
   - the (button|element) "([^"]*)?"( not)* contains the text "([^"]*)?"
-- Check if an element does not contain any text
+- Check if an element does not contain any text:
   - the (button|element) "([^"]*)?"( not)* contains any text
-- Check if an element is empty
+- Check if an element is empty:
   - the (button|element) "([^"]*)?" is( not)* empty
-- Check the url of the current browser window/tab
+- Check the url of the current browser window/tab:
   - the page url is( not)* "([^"]*)?"
-- Check if a modal is opened
+- Check if a modal is opened:
   - a (alertbox|confirmbox|prompt) is( not)* opened
