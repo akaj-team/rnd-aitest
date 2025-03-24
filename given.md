@@ -1,4 +1,4 @@
-#### 1. **Given steps**
+**Given steps**
 - Open a site in the current browser window/tab:
   - I open the (url|site) "([^"]*)?"
 - Check the (in)visibility of an element:
