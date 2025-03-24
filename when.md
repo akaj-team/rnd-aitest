@@ -1,25 +1,25 @@
 #### 2. **When steps**
-- (Double)click a link, button or element
+- (Double)click a link, button or element:
   - I (click|doubleclick) on the (link|button|element) "([^"]*)?"
-- Add or set the content of an input field
+- Add or set the content of an input field:
   - I (add|set) "([^"]*)?" to the inputfield "([^"]*)?"
-- Clear an input field
+- Clear an input field:
   - I clear the inputfield "([^"]*)?"
-- Pause for a certain number of milliseconds
+- Pause for a certain number of milliseconds:
   - I pause for (\d+)ms
-- Accept or dismiss a modal window
+- Accept or dismiss a modal window:
   - I (accept|dismiss) the (alertbox|confirmbox|prompt)
-- Enter a given text into a modal prompt
+- Enter a given text into a modal prompt:
   - I enter "([^"]*)?" into the prompt
-- Scroll to a given element
+- Scroll to a given element:
   - I scroll to element "([^"]*)?"
-- Close the last opened browser window/tab
+- Close the last opened browser window/tab:
   - I close the last opened (window|tab)
-- Focus the last opened browser window/tab
+- Focus the last opened browser window/tab:
   - I focus the last opened (window|tab)
-- Select an option based on it's index
+- Select an option based on it's index:
   - I select the (\d+)(st|nd|rd|th) option for element "([^"]*)?"
-- Select an option based on its name, value or visible text
+- Select an option based on its name, value or visible text:
   - I select the option with the (name|value|text) "([^"]*)?" for element "([^"]*)?"
-- Move the mouse by an (optional) offset of the specified element
+- Move the mouse by an (optional) offset of the specified element:
   - I move to element "([^"]*)?"( with an offset of (\d+),(\d+))
