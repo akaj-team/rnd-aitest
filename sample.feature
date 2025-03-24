@@ -8,12 +8,12 @@ Feature: User Registration
     Given I open the url "https://abc.com/"
 
   Scenario: User can see the registration page
-    Then I expect that the element "[data-test='input-username']" is displayed
-    Then I expect that the element "[data-test='input-email']" is displayed
-    Then I expect that the element "[data-test='input-password']" is displayed
-    Then I expect that the element "[data-test='input-confirm-password']" is displayed
-    Then I expect that the element "[data-test='btn-register']" is displayed
-    Then I expect that the element "[data-test='link-tou']" is displayed
+    Then I expect that element "[data-test='input-username']" is displayed
+    Then I expect that element "[data-test='input-email']" is displayed
+    Then I expect that element "[data-test='input-password']" is displayed
+    Then I expect that element "[data-test='input-confirm-password']" is displayed
+    Then I expect that element "[data-test='btn-register']" is displayed
+    Then I expect that element "[data-test='link-tou']" is displayed
 
   Scenario: User can navigate to the login page
     When I click on the link "Login"
