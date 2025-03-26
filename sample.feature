@@ -39,10 +39,10 @@ Feature: User Registration
     Given I add "<username>" to the inputfield "[data-test='username']"
     And I add "<password>" to the inputfield "[data-test='password']"
     Then I click on the button "[data-test='login-button']"
-    Then I expect that element "[data-test='error']" matches the text "<error_message>"
+    Then I expect that element "[data-test='error']" matches the text "<message>"
 
     Examples:
-      | username | password | error_message                                                             |
+      | username | password | message                                                             |
       |          |          | Username is required                                        |
       | user1    |          | Password is required                                        |
       | user1    | user2    | Username and password do not match any user in this service |
