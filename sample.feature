@@ -27,6 +27,14 @@ Feature: User Registration
     Then the element "[data-test='employee-id']" is displayed
     And the element "[data-test='employee-id']" matches the text "Employee Code"
 
+  Scenario: Ensure the place holder of username input field is displayed correctly
+    Given the element "[data-test='input-username']" is displayed
+    Then I expect that element "[data-test='input-username']" has place holder matches the text "Please Input Username"
+    
+  Scenario: Ensure the place holder of password input field is displayed correctly
+    Given the element "[data-test='input-password']" is displayed
+    Then I expect that element "[data-test='input-password']" has place holder matches the text "Please Input Password"
+
   Scenario Outline: User tries to register with invalid password
     Given the user is on the registration page
     When the user enters "<username>" as username
