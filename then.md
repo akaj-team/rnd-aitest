@@ -45,3 +45,5 @@
   - I expect that a (alertbox|confirmbox|prompt)( not)* contains the text "$text"
 - Check the place holder of a element display correct.
   - I expect that element "([^"]*)?" has place holder matches the text "([^"]*)?"
+- Check an element or input field contains the label:
+  - I expect that (button|element) "([^"])?"( not) contains the label "([^"]*)?"
