@@ -27,6 +27,14 @@ Feature: User Registration
     Then the element "[data-test='employee-id']" is displayed
     And the element "[data-test='employee-id']" matches the text "Employee Code"
 
+  Scenario: Ensure the place holder of username input field is displayed correctly
+    Then the element "[data-test='input-username']" is displayed
+    And the element "[data-test='input-username']" has place holder matches the text "Please Input Username"
+
+  Scenario: Ensure the place holder of password input field is displayed correctly
+    Then the element "[data-test='input-password']" is displayed
+    And the element "[data-test='input-password']" has place holder matches the text "Please Input Password"
+
   Scenario Outline: Validate username and password fields
     Given I clear the inputfield "[[data-test='username']"
     And I add "<username>" to the inputfield "[[data-test='username']"
