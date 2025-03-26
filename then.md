@@ -2,7 +2,7 @@
 - Check the title of the current browser window/tab:
   - I expect that the title is( not)* "([^"]*)?"
 - Checks that the element is on the page a specific number of times:
-  - I expect that element "([^"]*)?" does( not)* appear exactly "([^"]*)?" times
+  - I expect that element "([^"]*)?" does appear exactly "([^"]*)?" times
 - Check if a certain element is visible:
   - I expect that element "([^"]*)?" is( not)* visible
 - Check if a certain element becomes visible:
