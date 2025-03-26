@@ -35,21 +35,17 @@ Feature: User Registration
     Given the element "[data-test='input-password']" is displayed
     Then I expect that element "[data-test='input-password']" has place holder matches the text "Please Input Password"
 
-  Scenario Outline: User tries to register with invalid password
-    Given the user is on the registration page
-    When the user enters "<username>" as username
-    And the user enters "<password>" as password
-    And the user submits the registration form
-    Then the user should see an error message "<error_message>"
+  Scenario Outline: User tries to log in with invalid credentials
+    Given I add "<username>" to the inputfield "[data-test='username']"
+    And I add "<password>" to the inputfield "[data-test='password']"
+    Then I click on the button "[data-test='login-button']"
+    Then I expect that element "[data-test='error']" matches the text "<error_message>"
 
     Examples:
-      | username | password  | error_message                                       |
-      | user1    |       123 | Password must be at least 6 characters long         |
-      | user2    | abc       | Password must be at least 6 characters long         |
-      | user3    | password  | Password must contain at least one number           |
-      | user4    | Password1 | Password must contain at least one lowercase letter |
-      | user5    | PASSWORD1 | Password must contain at least one lowercase letter |
-      | user6    | pass1234  | Password must contain at least one uppercase letter |
+      | username | password | error_message                                                             |
+      |          |          | Username is required                                        |
+      | user1    |          | Password is required                                        |
+      | user1    | user2    | Username and password do not match any user in this service |
 
   Scenario: User successfully registers
     Given I clear the inputfield "[data-test='input-username']"
