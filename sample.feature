@@ -133,7 +133,7 @@ Feature: User Registration
     And I expect that element "[data-test='secondPageLink']" not contains the text "anderer linktext"
 
   # Scenario to check each element of the item of the list are displayed
-  Scenario Outline: User can see sample list item details
+  Scenario Outline: Check the items of list are displayed
     Given I expect that element "<item_title_selector>" is displayed
     And I expect that element "<item_time_selector>" is displayed
     And I expect that element "<item_image_selector>" is displayed
@@ -147,7 +147,7 @@ Feature: User Registration
       | [data-test='item-title-6'] | [data-test='item-time-6'] | [data-test='item-image-6'] |
  
   # Scenario to validate the content of each element of the item of the list
-  Scenario Outline: Validate each sample item details
+  Scenario Outline: Validate content of each element of the item of the list are display with correct content
     Given I expect that element "<item_title_selector>" is displayed
     And I expect that element "<item_time_selector>" is displayed
     And I expect that element "<item_image_selector>" is displayed
