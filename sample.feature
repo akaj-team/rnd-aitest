@@ -132,5 +132,37 @@ Feature: User Registration
     Then I expect that element "[data-test='secondPageLink']" contains the text "two"
     And I expect that element "[data-test='secondPageLink']" not contains the text "anderer linktext"
 
-  Scenario: Check the student list item count
-    Then I expect that element "[data-test='student-list']" does appear exactly "40" times
+  # Scenario to check each element of the item of the list are displayed
+  Scenario Outline: User can see sample list item details
+    Given I expect that element "<item_title_selector>" is displayed
+    And I expect that element "<item_time_selector>" is displayed
+    And I expect that element "<item_image_selector>" is displayed
+    Examples:
+      | item_title_selector        | item_time_selector        | item_image_selector        |
+      | [data-test='item-title-1'] | [data-test='item-time-1'] | [data-test='item-image-1'] |
+      | [data-test='item-title-2'] | [data-test='item-time-2'] | [data-test='item-image-2'] |
+      | [data-test='item-title-3'] | [data-test='item-time-3'] | [data-test='item-image-3'] |
+      | [data-test='item-title-4'] | [data-test='item-time-4'] | [data-test='item-image-4'] |
+      | [data-test='item-title-5'] | [data-test='item-time-5'] | [data-test='item-image-5'] |
+      | [data-test='item-title-6'] | [data-test='item-time-6'] | [data-test='item-image-6'] |
+ 
+  # Scenario to validate the content of each element of the item of the list
+  Scenario Outline: Validate each sample item details
+    Given I expect that element "<item_title_selector>" is displayed
+    And I expect that element "<item_time_selector>" is displayed
+    And I expect that element "<item_image_selector>" is displayed
+    And I expect that element "<item_time_selector>" contains the text "<expected_time>"
+    And I expect that element "<item_title_selector>" contains the text "<expected_title>"
+    And I expect that the attribute "src" from element "<item_image_selector>" is "<expected_image_src>"
+    Examples:
+      | item_title_selector        | item_time_selector        | item_image_selector        | expected_time  | expected_title                                           | expected_image_src                    |
+      | [data-test='item-title-1'] | [data-test='item-time-1'] | [data-test='item-image-1'] | "5 hours ago"  | "When The Morning Dawns - DJ Silver Club Remix"          | "https://example.com/moon_image"      |
+      | [data-test='item-title-2'] | [data-test='item-time-2'] | [data-test='item-image-2'] | "3 hours ago"  | "Cheap Airline Tickets Great Ways To Save"               | "https://example.com/person_image"    |
+      | [data-test='item-title-3'] | [data-test='item-time-3'] | [data-test='item-image-3'] | "7 hours ago"  | "Vacation Home Rental Success"                           | "https://example.com/cabin_image"     |
+      | [data-test='item-title-4'] | [data-test='item-time-4'] | [data-test='item-image-4'] | "5 hours ago"  | "Cruising Destination Ideas"                             | "https://example.com/mountains_image" |
+      | [data-test='item-title-5'] | [data-test='item-time-5'] | [data-test='item-image-5'] | "15 hours ago" | "Global Resorts Network Grn Putting Timeshares To Shame" | "https://example.com/piano_image"     |
+      | [data-test='item-title-6'] | [data-test='item-time-6'] | [data-test='item-image-6'] | "7 hours ago"  | "Vacation Home Rental Success"                           | "https://example.com/mountains_image" |
+  
+  # Scenario to check the total number item of the list
+  Scenario: Check the sample list item count
+    Then I expect that element "[data-test='sample-list']" does appear exactly "6" times
