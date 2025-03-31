@@ -151,11 +151,11 @@ Feature: User Registration
     Given I expect that element "<item_title_selector>" is displayed
     And I expect that element "<item_time_selector>" is displayed
     And I expect that element "<item_image_selector>" is displayed
-    And I expect that element "<item_time_selector>" contains the text "<expected_time>"
-    And I expect that element "<item_title_selector>" contains the text "<expected_title>"
-    And I expect that the attribute "src" from element "<item_image_selector>" is "<expected_image_src>"
+    And I expect that element "<item_time_selector>" contains the text "<expected_time_content_display>"
+    And I expect that element "<item_title_selector>" contains the text "<expected_title_content_display>"
+    And I expect that the attribute "src" from element "<item_image_selector>" is "<expected_image_src_display>"
     Examples:
-      | item_title_selector        | item_time_selector        | item_image_selector        | expected_time  | expected_title                                           | expected_image_src                    |
+      | item_title_selector        | item_time_selector        | item_image_selector        | expected_time_content_display  | expected_title_content_display           | expected_image_src_display    |
       | [data-test='item-title-1'] | [data-test='item-time-1'] | [data-test='item-image-1'] | "5 hours ago"  | "When The Morning Dawns - DJ Silver Club Remix"          | "https://example.com/moon_image"      |
       | [data-test='item-title-2'] | [data-test='item-time-2'] | [data-test='item-image-2'] | "3 hours ago"  | "Cheap Airline Tickets Great Ways To Save"               | "https://example.com/person_image"    |
       | [data-test='item-title-3'] | [data-test='item-time-3'] | [data-test='item-image-3'] | "7 hours ago"  | "Vacation Home Rental Success"                           | "https://example.com/cabin_image"     |
