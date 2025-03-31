@@ -131,3 +131,6 @@ Feature: User Registration
     And the element "[data-test='secondPageLink']" not contains the text "andere linktext"
     Then I expect that element "[data-test='secondPageLink']" contains the text "two"
     And I expect that element "[data-test='secondPageLink']" not contains the text "anderer linktext"
+
+  Scenario: Check the student list item count
+    Then I expect that element "[data-test='student-list']" does appear exactly "40" times
