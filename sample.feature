@@ -29,11 +29,11 @@ Feature: User Registration
 
   Scenario: Ensure the place holder of username input field is displayed correctly
     Given the element "[data-test='input-username']" is displayed
-    Then I expect that element "[data-test='input-username']" has place holder matches the text "Please Input Username"
+    Then I expect that the attribute "placeholder" from element "[data-test='input-username']" is "Please Input Username"
     
   Scenario: Ensure the place holder of password input field is displayed correctly
     Given the element "[data-test='input-password']" is displayed
-    Then I expect that element "[data-test='input-password']" has place holder matches the text "Please Input Password"
+    Then I expect that the attribute "placeholder" from element "[data-test='input-password']" is "Please Input Password"
 
   Scenario Outline: User tries to log in with invalid credentials
     Given I add "<username>" to the inputfield "[data-test='username']"
